@@ -1,0 +1,95 @@
+.app{
+  .enter-dialog{
+    .el-dialog__body{
+      padding-bottom: 0;
+    }
+  }
+  .el-dialog{
+    max-width: 1000px;
+    min-width: 680px;
+  }
+  .scope-dialog{
+    .el-dialog{
+      min-width: 100px;
+      width: 364px;
+      .el-dialog__body{
+        padding: 0;
+      }
+    }
+  }
+  .payment-dialog{
+    min-width: 390px;
+  }
+  .el-dialog__body{
+    padding: 30px 0;
+    .prompt-text{
+      padding: 12px 0 42px 26px;
+      color: $text-red-color;
+      font-size: $md-size;
+    }
+  }
+  .el-dialog__wrapper{
+    // background:rgba(0,0,0,0.5);
+  }
+  .el-dialog__header{
+    .left-title{
+      position: absolute;
+      left: 0;
+      color:#fff;
+      .top{
+        position: relative;
+        width:100px;
+        height:28px;
+        display: inline-block;
+        background-color: $gray-color;
+        line-height: 28px;
+        text-align: center;
+        color:$text-main-color;
+        font-size: $md-size;
+        &::after{
+          content: '';
+          @include triangle-right(14px,12px,$gray-color);
+          position: absolute;
+          right:-24px;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          left:0px;
+          width: 4px;
+          background-color: $main-color;
+          height: 100%;
+        }
+      }
+      .prompt{
+        background: #fff;
+        padding-left: 26px;
+        width: auto;
+        &::after{
+          border-width: 0;
+        }
+        &::before{
+          width: 0;
+        }
+      }
+    }
+  .el-dialog__headerbtn{
+    z-index: 20;
+  }
+  }
+  .service-box{
+    .el-dialog{
+      max-width: 1000px;
+      min-width: 390px;
+    }
+    .el-dialog__body{
+      padding: 30px 0 0 0;
+    }
+  }
+  .preview-show{
+    .el-dialog{
+      min-width: 0;
+      width: 400px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.app{
+  .el-form-item__error {
+    color: #f56c6c;
+    font-size: 12px;
+    padding-top: 0;
+    line-height: 1;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .el-cascader{
+    width:70%;
+  }
+  .comm-edit{
+    .el-cascader{
+      width:500px;
+    }
+  }
+  .store-add{
+    .el-cascader{
+      width:100%;
+    }
+  }
+  .sign{
+    .form-height{
+      .el-cascader{
+        width:100%;
+        .el-form-item__error {
+          color: #f56c6c;
+          font-size: 12px;
+          line-height: 1;
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+.el-cascader-menus{
+  // top: 300px !important;
+  height:240px;
+  .el-cascader-menu__item.is-active{
+    color:$main-color;
+  }
+}
+.el-cascader-menu{
+  height: 240px;
+}

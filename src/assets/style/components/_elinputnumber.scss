@@ -1,0 +1,47 @@
+.app{
+  .el-date-editor.el-input{
+    width:100%;
+  }
+  .el-input-number{
+    width:130px;
+    line-height: 32px;
+  }
+  .el-input-number__decrease, .el-input-number__increase{
+    width:30px;
+  }
+  .payment{
+    .el-input-number__decrease, .el-input-number__increase{
+      width:24px;
+      height: 21px;
+      top: 8px;
+      background: #fff;
+      color: rgba(51,51,51,1);
+      border-radius: unset;
+      border: 1px solid #dcdfe6;
+    }
+    .el-input__inner{
+      height: 22px;
+    }
+    .el-input-number{
+      line-height: 23px;
+      width: 110px;
+      padding-top: 7px;
+    }
+    .el-input{
+      width: 55px;
+      margin: 0 auto;
+      .el-input__inner{
+        border-radius: unset;
+      }
+    }
+  }
+  .el-input-number .el-input__inner{
+    padding:0;
+  }
+  .el-input-number__decrease:hover, .el-input-number__increase:hover{
+    color:$main-color;
+  }
+  .el-input-number__decrease:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled), .el-input-number__increase:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled){
+    border-color:$main-color;
+  }
+}

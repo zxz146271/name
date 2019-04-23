@@ -1,0 +1,95 @@
+
+//== font size
+$detail-price-big-size: 24px;
+$detail-price-size: 20px;
+$detail-size: 18px;
+$xlg-size: 16px;
+$lg-size: 15px;
+$md-size: 14px;
+$sm-size: 13px;
+$xs-size: 12px;
+$xxs-size: 11px;
+
+//== Colors
+//theme color
+$main-color: #fd4343;
+$gray-color: #F3F4F8;
+$yello-color: #F59C3B;
+$yello-color-bright:#FFE540;
+$blue-color: #6FADEC;
+$text-header-color: #FFFFFF;
+$child-nav-bg: #F3F4F8;
+$footer-bg: #737685;
+$pink-color: #FFC4C4;
+$pink-bg: #FFF7F7;
+$shallow-red:#FF7169;
+// adorn color
+$adorn-color-1: #EB5C00;
+$adorn-color-2: #44AF7B;
+$adorn-color-3: #7180F1;
+$adorn-color-4: #B3B5BA;
+// $light-color: darken($main-color,0.2);
+$body-bg-color: #FFFFFF;
+$addon-color: #a1bd97;
+$wx-color:#56BD64;
+
+//text color
+$text-main-color: #27292E;
+$text-gray-color: #737685;
+$text-red-color: #FD4343;
+$text-adorn-color: #B3B5BA;
+$child-nav-color: #27292E;
+$table-text-color:#424552;
+//border color
+$border-color: #E0E0E0;
+$input-border-color:#B3B5BA;
+$checkbox-border-color:#979797;
+$blue-border-color:#D0E7FF;
+//== margin
+$x-dis: 10px;
+$block-dis: 8px;
+$page-margin: 12px;
+
+@mixin linear-grad {
+  background-image: linear-gradient(90deg,#E70020,#fd4343,#fe5e55);
+}
+
+@mixin linear($direction,$color1,$color2) {
+  background:linear-gradient($direction,$color1,$color2);
+}
+
+@mixin active-triangle($width, $color) {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-bottom: $width solid $color;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%)
+}
+
+@mixin active-line {
+  content: "";
+  width: 20px;
+  height:3px;
+  background:$main-color;
+  display: inline-block;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%)
+}
+@mixin icon($width, $height, $url, $size: contain){
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size:$size;
+  background-image: url($url);
+}
+
+
+

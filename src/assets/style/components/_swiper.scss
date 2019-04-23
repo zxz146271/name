@@ -1,0 +1,100 @@
+.app {
+  .top-news{
+    .swiper-container-autoheight{
+      // border-radius: 5px;
+    }
+    .swiper-wrapper{
+      height: auto!important;
+      .swiper-slide{
+        height: 100%;
+      }
+    }
+    .swiper-pagination{
+      bottom: 10px;
+      left: 0;
+      right: 0;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active{
+      background: #fd4343;
+    }
+    .swiper-pagination-bullet{
+      width:12px;
+      height: 12px;
+      margin: 0 6px;
+      opacity: 1;
+      background: $gray-color;
+    }
+    .swiper-item{
+      a{
+        display: inline-block;
+        width:100%;
+        height: 330px;
+      }
+      img{
+        width:100%;
+        height: 100%;
+      }
+    }
+    .swiper-button-prev, .swiper-button-next{
+      background-size: 24px 38px;
+    }
+  }
+  .remind{
+    .right{
+      .swiper-wrapper{
+        height: 40px!important;
+      }
+      .middleSwiper{
+        height:50px;
+        // .swiper-pagination{
+        //   top:40%;
+        // }
+        .swiper-slide{
+          padding: 4px 0;
+        }
+        .swiper-pagination-bullet.swiper-pagination-bullet-active{
+          background: #fd4343;
+        }
+        .swiper-pagination-bullet{
+          width: 8px;
+          height: 8px;
+          margin: 8px 0px;
+          background: $gray-color;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .mhome{
+    #top-pagination{
+      .swiper-pagination-bullet{
+        background:rgba(255,255,255,0.5);
+        opacity: 1;
+      }
+      .swiper-pagination-bullet-active{
+        background:rgba(255,255,255,1);
+      }
+    }
+    .case{
+      .swiper-container{
+        overflow: visible;
+      }
+      .swiper-slide2{
+        width: 300px!important;
+      }
+      #case-pagination{
+        bottom: -35px;
+        .swiper-pagination-bullet{
+          width:18px;
+          height:2px;
+          background:rgba(255,255,255,0.5);
+          opacity: 1;
+          border-radius: unset;
+        }
+        .swiper-pagination-bullet-active{
+          background:rgba(255,255,255,1);
+        }
+      }
+    }
+  }
+}

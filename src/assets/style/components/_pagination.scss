@@ -1,0 +1,42 @@
+.app{
+  .pagin{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    .total{
+      line-height: 32px;
+      font-size: $xs-size;
+      color:$text-gray-color;
+    }
+  }
+  .el-pagination{
+    text-align: right;
+    .btn-next ,.btn-prev{
+      background: rgba(0,0,0,0.04);
+    }
+    .el-input__inner:focus{
+      border-color:$main-color;
+    }
+    .el-input__inner{
+      border-color:$border-color;
+      font-size: $xs-size;
+    }
+    button{
+      &:hover{
+        color:$main-color;
+      }
+    }
+    .el-pager{
+      li{
+        background-color:#fff; 
+        color: #424552;
+        font-weight: 500;
+        font-size: $xs-size;
+        &.active{
+          color:$main-color;
+        }
+      }
+    } 
+  }
+}

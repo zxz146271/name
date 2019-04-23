@@ -1,0 +1,45 @@
+.app{
+  .el-collapse{
+    .el-collapse-item{
+      >div{
+        >div.is-active{
+          color: #FD4343;
+          a{
+            color: #FD4343;
+          }
+        }
+      }
+    }
+  }
+  .el-collapse-item__header{
+    background: #f4f4f4;
+    border: none;
+    .link-to{
+      display: inline-block;
+      width: 95px;
+    }
+  }
+  .el-collapse-item__content{
+    padding: 0;
+    ul{
+      li{
+        display: flex;
+        a{
+          flex: 1;
+        }
+      }
+    }
+  }
+  .no-child{
+    .el-collapse-item__arrow{
+      display: none;
+    }
+  }
+}
+.app{
+  .el-collapse-item__arrow{
+    margin:0 8px 0 0;
+    position: absolute;
+    right: 0;
+  }
+}

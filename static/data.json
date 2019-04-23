@@ -1,0 +1,329 @@
+{
+    "navDatas": [
+        {
+            "id": "1",
+            "title": "首页",
+            "path": "/home",
+            "src": "../static/image/shouye_icon@2x.png",
+            "activeSrc": "../static/image/shouyehong_icon@2x.png"
+            },
+        {
+            "id": "9",
+            "title": "我的",
+            "path": "",
+            "src": "../static/image/huodong_icon@2x.png",
+            "activeSrc": "../static/image/huodonghong_icon@2x.png",
+            "children": [
+                    {
+                        "id": "9-1",
+                        "title": "我的内容库",
+                        "path": "/mine/countAllofme"
+                    },
+                    {
+                        "id": "9-2",
+                        "title": "酷家乐",
+                        "path": "/mine/countAllofme/coolKnorr"
+                    }
+                ]
+            },
+        {
+            "id": "2",
+            "title": "门店",
+            "path": "",
+            "src": "../static/image/mendian_icon@2x.png",
+            "activeSrc": "../static/image/mendianhong_icon@2x.png",
+            "children": [
+                {
+                    "id": "2-1",
+                    "title": "门店商品",
+                    "path": "/myStore/storeCommodity"
+                },
+                {
+                    "id": "2-2",
+                    "title": "门店订单",
+                    "path": "",
+                    "children": [
+                        {
+                            "id": "2-2-2",
+                            "title": "标准订单",
+                            "path": "/myStore/order/orderManage"
+                    },
+                        {
+                            "id": "2-2-3",
+                            "title": "快开单",
+                            "path": "/myStore/order/easyOrderManage"
+                    },
+                        {
+                            "id": "2-2-4",
+                            "title": "需要关怀的订单",
+                            "path": "/myStore/order/careManage"
+                    },
+                        {
+                            "id": "2-2-5",
+                            "title": "ERP对接订单",
+                            "path": "/myStore/order/erpEasyOrderManage"
+                    }
+                  ]
+                },
+                {
+                    "id": "2-3",
+                    "title": "客户管理",
+                    "path": "",
+                    "children": [
+                        {
+                            "id": "2-3-1",
+                            "title": "全部客户",
+                            "path": "/myStore/member/submemberManage"
+                    },
+                        {
+                            "id": "2-3-2",
+                            "title": "自定义客户标签",
+                            "path": "/myStore/member/customTag"
+                    },
+                    {
+                            "id": "2-3-3",
+                            "title": "自定义跟进进度",
+                            "path": "/myStore/member/customSpeed"
+                    }
+                  ]
+                },
+                {
+                    "id": "2-4",
+                    "title": "微店展示",
+                    "path": "",
+                    "children": [
+                        {
+                            "id": "2-4-1",
+                            "title": "微店装修",
+                            "path": "/myStore/shop/survey"
+                    },
+                        {
+                            "id": "2-4-2",
+                            "title": "自定义分享图",
+                            "path": "/myStore/shop/sharePicture"
+                    },  {
+                            "id": "2-4-3",
+                            "title": "首页轮播图",
+                            "path": "/myStore/shop/carousel"
+                    },  {
+                            "id": "2-4-4",
+                            "title": "展示推荐商品",
+                            "path": "/myStore/shop/recommendGoods"
+                    }
+                  ]
+                },
+                {
+                    "id": "2-6",
+                    "title": "业绩管理",
+                    "path": "",
+                    "children": [
+                        {
+                            "id": "2-6-1",
+                            "title": "带客数业绩",
+                            "path": "/myStore/performance/performanceMana"
+                    },
+                        {
+                            "id": "2-6-2",
+                            "title": "订单量业绩",
+                            "path": "/myStore/performance/performanceView"
+                    },
+                        {
+                            "id": "2-6-3",
+                            "title": "成交金额业绩",
+                            "path": "/myStore/performance/performanceMoney"
+                    }
+                  ]
+                },
+                {
+                    "id": "2-7",
+                    "title": "门店员工管理",
+                    "path": "/myStore/storeStaffManage"
+                },
+                {
+                    "id": "2-8",
+                    "title": "微店内容管理(发现)",
+                    "path": "/myStore/storeDynamicManagement"
+                }
+              ]
+            },
+        {
+            "id": "3",
+            "title": "门店活动",
+            "path": "",
+            "src": "../static/image/huodong_icon@2x.png",
+            "activeSrc": "../static/image/huodonghong_icon@2x.png",
+            "children": [
+                {
+                    "id": "3-1",
+                    "title": "优惠券",
+                    "path": "/marketing/storeMarket/activityCoupon"
+                    },
+                {
+                    "id": "3-2",
+                    "title": "秒杀",
+                    "path": "/marketing/storeMarket/activityGrab"
+                    },
+                {
+                    "id": "3-3",
+                    "title": "团购",
+                    "path": "/marketing/storeMarket/activityCollage"
+                    },
+                {
+                    "id": "3-4",
+                    "title": "卡券核销",
+                    "path": "/marketing/writeOff"
+                }
+              ]
+            },
+        {
+            "id": "4",
+            "title": "门店数据",
+            "path": "",
+            "src": "../static/image/mendian_icon@2x.png",
+            "activeSrc": "../static/image/mendianhong_icon-1@2x.png",
+            "children": [
+                {
+                    "id": "4-1",
+                    "title": "门店数据概况",
+                    "path": "/data/oneStoreData/dataOverview"
+                    },
+                {
+                    "id": "4-2",
+                    "title": "已购客户分析",
+                    "path": "/data/oneStoreData/analysisMember"
+                    },
+                {
+                    "id": "4-3",
+                    "title": "商品分析",
+                    "path": "/data/oneStoreData/analysisGoods"
+                    },
+                {
+                    "id": "4-4",
+                    "title": "交易分析",
+                    "path": "/data/oneStoreData/analysisTrade"
+                    }
+                ]
+            },
+
+        {
+            "id": "5",
+            "title": "汇总数据",
+            "path": "",
+            "src": "../static/image/quanbu_icon@2x.png",
+            "activeSrc": "../static/image/quanbuhong_icon@2x.png",
+            "children": [
+                {
+                    "id": "5-1",
+                    "title": "汇总数据概况",
+                    "path": "/data/allStoreData/dataOverview"
+                    },
+                {
+                    "id": "5-2",
+                    "title": "已购客户分析",
+                    "path": "/data/allStoreData/analysisMember"
+                    },
+                {
+                    "id": "5-3",
+                    "title": "商品分析",
+                    "path": "/data/allStoreData/analysisGoods"
+                    },
+                {
+                    "id": "5-4",
+                    "title": "交易分析",
+                    "path": "/data/allStoreData/analysisTrade"
+                    },
+                {
+                    "id": "5-5",
+                    "title": "内容分发数据",
+                    "path": "/data/oneStoreData/analysisContent"
+                    }
+                  ]
+                },
+        {
+            "id": "6",
+            "title": "品牌资料配置",
+            "path": "",
+            "src": "../static/image/ziliao_icon@2x.png",
+            "activeSrc": "../static/image/ziliaohong_icon@2x.png",
+            "children": [
+                {
+                    "id": "6-1",
+                    "title": "品牌系列分类",
+                    "path": "/store/brandsManage"
+                },
+                {
+                    "id": "6-2",
+                    "title": "门店管理",
+                    "path": "/store/storeManage"
+                    },
+                {
+                    "id": "6-3",
+                    "title": "全部员工管理",
+                    "path": "/store/staffManage"
+                },
+                {
+                    "id": "6-5",
+                    "title": "业绩",
+                    "path": "",
+                    "children": [
+                        {
+                            "id": "6-5-1",
+                            "title": "带客数业绩",
+                            "path": "/store/performance/performanceMana"
+                    },
+                        {
+                            "id": "6-5-2",
+                            "title": "订单量业绩",
+                            "path": "/store/performance/performanceView"
+                    },
+                        {
+                            "id": "6-5-3",
+                            "title": "成交金额业绩",
+                            "path": "/store/performance/performanceMoney"
+                    }
+                  ]
+                },
+                {
+                    "id": "6-6",
+                    "title": "全部商品",
+                    "path": "/store/commManage"
+
+                },
+                {
+                    "id": "6-7",
+                    "title": "标签规则",
+                    "path": "/store/labelRoles"
+                },
+                {
+                    "id": "6-8",
+                    "title": "信息维护",
+                    "path": "/store/maintain"
+                },
+                {
+                    "id": "6-9",
+                    "title": "品牌内容库",
+                    "path": "/store/brandContent"
+                },
+                {
+                    "id": "6-10",
+                    "title": "关联下级",
+                    "path": "/store/associatedLower"
+                }
+              ]
+            },
+        {
+            "id": "7",
+            "title": "财务",
+            "path": "/financeCenter/myAccount",
+            "src": "../static/image/caiwu_icon@2x.png",
+            "activeSrc": "../static/image/caiwuhong_icon@2x.png"
+            },
+        {
+            "id": "8",
+            "title": "帮助",
+            "path": "/help/helpCenter",
+            "src": "../static/image/bangzhu_icon@2x.png",
+            "activeSrc": "../static/image/bangzhuhong_icon@2x.png"
+            }
+          ]
+}

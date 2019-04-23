@@ -1,0 +1,56 @@
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4, h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'SimHei';
+  font-family: 'PingFangSC';
+  font-family: 'Microsoft YaHei';
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  &:focus {
+    outline: none;
+  }
+}
+*{
+  box-sizing: border-box;
+}
+body {
+  -webkit-text-size-adjust: 100%;
+  color: $text-main-color;
+}
+
+a {
+  color: $text-main-color;
+}
+
+
+/*placeholder颜色*/
+::-webkit-input-placeholder{
+  color: $text-adorn-color;
+}
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"], input[type="text"] {
+  -webkit-appearance: none;
+}
+
+input, button {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+}
+html, body {
+  background-color: $body-bg-color;
+  height: 100%;
+}
+.app{
+  height:100%;
+}
+.main{
+  height:100%;
+}

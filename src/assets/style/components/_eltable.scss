@@ -1,0 +1,71 @@
+.app{
+  .el-form-item{
+    margin-bottom: 18px;
+  }
+  .form-block{
+    .el-col-offset-12{
+      margin-right: 50%;
+      margin-left: 0;
+    }
+  }
+  .el-table{
+    color:$table-text-color;
+  }
+  .el-table__header-wrapper{
+    th{
+      background-color: #F0F0F0;
+      color:$table-text-color;
+      font-size: $xs-size;
+      font-weight: bold;
+      border-bottom: 1px solid #B3B5BA;
+    }
+  }
+  .header-nobg{
+    .el-table__header-wrapper{
+      th{
+        background-color:#fff;
+        padding: 10px 0;
+      }
+    }
+  }
+  .el-table th{
+    padding: 8px 0;
+  }
+  .el-table td{
+    padding: 13px 0;
+    border-bottom:1px solid #E4E7EC;
+    font-size: $xs-size;
+  }
+  .order-detail{
+    .detail-item{
+      .img-view{
+        width:80px;
+        height:80px;
+        border-radius: 4px;
+      }
+      .img-view2{
+        width:240px;
+        height:240px;
+        border-radius: 4px;
+      }
+    }
+    .el-table .cell, .el-table th div{
+      padding-left:20px;
+    }
+  }
+  .el-table__header-wrapper th{
+    background: $gray-color;
+    padding: 10px 0;
+    border-bottom-color: $border-color;
+  }
+  .balck-th{
+    .el-table__header-wrapper th{
+      background: #fff;
+    }
+  }
+  .comm-edit{
+    .el-form-item__label,.el-radio__label,.el-input__inner,.el-select-dropdown__item{
+      font-size: $xs-size;
+    }
+  }
+}

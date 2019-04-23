@@ -1,0 +1,80 @@
+.app{
+  // .el-progress{
+  //   display: none;
+  // }
+  .el-upload--picture-card{
+    width:80px;
+    height:80px;
+    line-height: 90px;
+  }
+  .el-upload-list--picture-card .el-upload-list__item-status-label{
+    background-color:$main-color;
+  }
+  .el-upload--picture-card:hover, .el-upload:focus{
+    border-color:$main-color;
+    color:$main-color;
+    &.el-upload--picture-card i{
+      color:$main-color;
+    }
+  }
+  .el-upload-list--picture-card .el-upload-list__item{
+    width:80px;
+    height:80px;
+    margin: 0 8px 0px 0;
+  }
+  .upload-item{
+    .el-form-item__content{
+      line-height: 0;
+      display: flex;
+    }
+  }
+  .el-upload-dragger{
+    border: 0;
+  }
+  .steps{
+    .el-upload{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .upload-block{
+      position: relative;
+    }
+    .el-upload-dragger{
+      height: 195px;
+      padding:45px 0;
+    }
+    .el-upload__input{
+      position: absolute;
+    }
+    .el-upload-list{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .el-upload-list__item .el-icon-upload-success{
+      color:$main-color;
+    }
+    .el-upload-list__item.is-success .el-upload-list__item-name:hover{
+      color:$text-main-color;
+    }
+    .el-progress-bar__inner{
+      background-color:#F00;
+    }
+    .el-upload-list__item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .el-upload-list__item-name{
+        .el-icon-document{
+          // @include icon(22px,22px,'assets/image/icon/icon-excel.png');
+          &::before{
+            content: ''
+          }
+        }
+      }
+    }
+  }
+}

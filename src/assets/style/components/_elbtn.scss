@@ -1,0 +1,115 @@
+.app{
+  .el-button{
+    font-size: $xs-size;
+    // border-color:$input-border-color;
+  }
+  .el-button+.el-button{
+    // margin-left:6px;
+  }
+  .el-button:focus, .el-button:hover{
+    border-color: lighten($main-color,6%);
+    color:lighten($main-color,6%);
+    background: #fff;
+  }
+  .el-button--primary{
+    background-color: $main-color;
+    border-color: $main-color;
+  }
+  .el-button--primary:focus, .el-button--primary:hover{
+    background-color: lighten($main-color,6%);
+    border-color: lighten($main-color,6%);
+    color:$text-header-color;
+  }
+  .comm-opera .el-button i{
+    color:#fff;
+  }
+  .el-coll .el-button i{
+    color:#fff;
+  }
+  .el-coll .node{
+    span{
+      display: inline-block;
+      width:100%;
+      height:100%;
+    }
+  }
+  .remarks{
+    .texta{
+      height: 150px;
+      textarea{
+        height:100%;
+      }
+    }
+  }
+  .administration{
+    .add-input{
+      .el-button--mini{
+        padding: 3px 9px;
+      }
+    }
+    .add-label{
+      .el-button--mini{
+        padding: 3px 9px;
+      }
+    }
+  }
+}
+
+
+.app{
+  .label-star{
+    .el-form-item__label::before{
+      content: "*";
+      color: rgb(245, 108, 108);
+      margin-right: 4px;
+    }
+  }
+}
+.app{
+  .activity-box{
+    .bottom{
+      ul{
+        li{
+          .el-button{
+            background: transparent;
+            border: none;
+            color: #fff;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.app{
+  .info-cont{
+    .edit{
+      .el-button.is-circle{
+        padding: 4px;
+      }
+    }
+  }
+}
+.app{
+  .top-nav{
+    .el-button{
+      font-size: 14px;
+      padding: 4px 10px;
+      color: #e70020;
+      border: 1px solid #e70020;
+      &:hover{
+        background: #e70020;
+        color: #fff;
+      }
+    }
+  }
+  .qrcode-detail{
+    .down-code{
+      color: #fff;
+      font-size: 12px;
+      background: #e70020;
+      padding: 10px 0;
+      border-radius: 0;
+    }
+  }
+}

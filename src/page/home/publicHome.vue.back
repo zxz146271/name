@@ -1,0 +1,514 @@
+<template>
+  <div class="home">
+    <!-- <x-header></x-header>
+    <div class="top-news">
+        <swiper :options="swiperOption" ref="mySwiper">
+          <swiper-slide v-for="(item,index) in imgList" :key="index">
+              <a class="swiper-slide-a">
+                <img class="swiper-slide-img" :src="item">
+              </a>
+          </swiper-slide>
+        <div class="swiper-pagination"  slot="pagination"></div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+        </swiper>
+    </div>
+    <div class="main-cont">
+        <div class="d_jump teatures" >
+            <el-row class="teatures-list"  v-for="(item,index) in featuresList" :key="index" v-if="index%2==0">
+                <el-col :span="12">
+                    <div class="row-bg">
+                        <img :src="item.filePath" alt="" class="teatures-img">
+                    </div>
+                </el-col>
+                <el-col :span="12">
+                    <div class="row-bg">
+                        <h2>{{ item.introduceTitle }}</h2>
+                        <div class="cont" v-html="item.introduceContent"></div>
+                    </div>
+                </el-col>
+            </el-row>
+            <el-row class="teatures-list"  v-else>
+                <el-col :span="12">
+                    <div class="row-bg">
+                        <h2>{{ item.introduceTitle }}</h2>
+                        <div class="cont" v-html="item.introduceContent"></div>
+                    </div>
+                </el-col>
+                <el-col :span="12">
+                    <div class="row-bg">
+                        <img :src="item.filePath" alt="" class="teatures-img">
+                    </div>
+                </el-col>
+            </el-row>
+        </div>
+        <div class="d_jump solution">
+            <p class="title">解决方案</p>
+            <div class="solution-list">
+                <div class="solution-item" v-for="(item,index) in solutionList" :key="index">
+                    <div  :style="{backgroundImage: 'url(' + item.filePath + ')'}" class="solution-img">
+                        <p>{{item.introduceTitle}}</p>
+                    </div>
+                    <div v-html="item.introduceContent" style="line-height:2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d_jump case">
+            <div class="case-item">
+                <div class="case-list" v-for="(item,index) in caseList" :key="index">
+                    <div class="img-view">
+                        <img :src="item.filePath.split(',')[0]" alt="">
+                        <div v-html="item.introduceContent">
+                        </div>
+                    </div>
+                    <p class="case-text">
+                        <img :src="item.filePath.split(',')[1]" alt="">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="foot">
+        <div class="foot-top">
+            <p class="foot-btn" @click="goTest">现在试用</p>
+        </div>
+        <div class="foot-main">
+            <div class="tel-us">
+                <p class="title">联系我们</p>
+                <p>咨询热线：400-668-4866</p>
+                <div class="QRcode">
+                    <div>
+                        <img src="../../assets/image/read.png" alt="">
+                        <p>订阅号</p>
+                    </div>
+                    <div>
+                        <img src="../../assets/image/service.png" alt="">
+                        <p>服务号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-bottom">
+            <ul class="foot-item">
+                <li class="foot-list">帮助</li>
+                <li class="foot-list">隐私</li>
+                <li class="foot-list">条款</li>
+                <li class="foot-list last">使用</li>
+            </ul>
+            <p>Copyright&nbsp;2018&nbsp;BigZone.&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;<a href="http://www.miibeian.gov.cn" target="_blank">沪ICP备17013756号-4</a></p>
+        </div>
+    </footer> -->
+  </div>
+</template>
+<script>
+import xHeader from '../../components/header/publicHeader'
+import 'swiper/dist/css/swiper.css'
+export default {
+  data () {
+    return {
+      imgList: [],
+      contentMap: [],
+      featuresList: [],
+      solutionList: [],
+      caseList: [],
+      topNews: [{
+        imgSrc: '../../assets/image/banner1.jpg',
+        url: ''
+      }, {
+        imgSrc: '../../assets/image/banner2.jpg',
+        url: ''
+      }, {
+        imgSrc: '//static-oss.muyusi.com/back_pic/1658afeedc812b6.jpg',
+        url: ''
+      }, {
+        imgSrc: '//static-oss.muyusi.com/back_pic/8357a5ebfd572fd.jpeg',
+        url: ''
+      }],
+      swiperOption: {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        notNextTick: true,
+        // swiper configs 所有的配置同swiper官方api配置
+        loop: true,
+        autoplay: true,
+        speed: 400,
+        grabCursor: true,
+        setWrapperSize: true,
+        autoHeight: true,
+        paginationClickable: true,
+        prevButton: '.swiper-button-prev',
+        nextButton: '.swiper-button-next',
+        scrollbar: '.swiper-scrollbar',
+        mousewheelControl: true,
+        observeParents: true,
+        // if you need use plugins in the swiper, you can config in here like this
+        // 如果自行设计了插件，那么插件的一些配置相关参数，也应该出现在这个对象中，如下debugger
+        debugger: true
+        // swiper callbacks
+        // swiper的各种回调函数也可以出现在这个对象中，和swiper官方一样
+      },
+      swiperOption2: {
+        direction: 'vertical',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      },
+      caseData: [
+        {
+          url: '',
+          title: '都市新海岸',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus? Quae ullam quibusdam illum velit'
+        },
+        {
+          url: '',
+          title: '都市新海岸',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus? Quae ullam quibusdam illum velit'
+        },
+        {
+          url: '',
+          title: '都市新海岸',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus? Quae ullam quibusdam illum velit'
+        },
+        {
+          url: '',
+          title: '都市新海岸',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus? Quae ullam quibusdam illum velit'
+        },
+        {
+          url: '',
+          title: '都市新海岸',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus? Quae ullam quibusdam illum velit'
+        },
+        {
+          url: '',
+          title: '都市新海岸',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus? Quae ullam quibusdam illum velit'
+        },
+        {
+          url: '',
+          title: '都市新海岸',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus? Quae ullam quibusdam illum velit'
+        },
+        {
+          url: '',
+          title: '都市新海岸',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus? Quae ullam quibusdam illum velit'
+        },
+        {
+          url: '',
+          title: '都市新海岸',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus? Quae ullam quibusdam illum velit'
+        }
+      ]
+    }
+  },
+  mounted () {
+    this.findData()
+  },
+  methods: {
+    findData () {
+      this.$api.findHomeData().then(res => {
+        if (res.code === 0) {
+          this.imgList = res.data.imgList
+          this.contentMap = res.data.contentMap
+          for (var i in this.contentMap) {
+            if (i === '1') {
+              this.featuresList = this.contentMap[i]
+            }
+            if (i === '2') {
+              this.solutionList = this.contentMap[i]
+            }
+            if (i === '3') {
+              this.caseList = this.contentMap[i]
+              console.log(this.caseList)
+            }
+          }
+        }
+      })
+    },
+    chooseDate (index) {
+      this.chooseDateIndex = index
+    },
+    goTest () {
+      this.$router.push('/registered')
+    }
+  },
+  components: {xHeader}
+}
+</script>
+<style lang="scss" scoped>
+@import '../../assets/style/mixins/var';
+@import '../../assets/style/components/icon';
+.home{
+  .top-news{
+    .swiper-slide-a{
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .swiper-slide-img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .main-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .teatures{
+        width:1200px;
+        margin-top: 100px;
+        .teatures-list{
+            height: 400px;
+            margin-top: 30px;
+            .row-bg{
+                height: 400px;
+                padding: 1px;
+                background: #F7F7F7;
+                border-radius: 5px;
+                .teatures-img{
+                    width: 598px
+                }
+                h2{
+                    margin: 10px 0;
+                    font-size: 22px;
+                    padding: 60px 114px 30px;
+                }
+                .cont{
+                    margin: 10px 0;
+                    font-size: 16px;
+                    color: #27292E;
+                    padding: 0 114px;
+                    line-height: 30px;
+                }
+                .teatures-btn{
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    .solution{
+       width:1200px;
+        min-height: 300px;
+        margin: 100px 0 110px;
+        .title{
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0 40px;
+        }
+        .solution-list{
+            display: flex;
+            justify-content: space-around;
+            .solution-item{
+                width: 210px;
+                text-align: center;
+                margin: 0 45px;
+                .solution-text{
+                    font-size: 16px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-weight: 500;
+                    color: #333;
+                }
+                .solution-img{
+                    height: 210px;
+                    margin-bottom: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    p{
+                        color: #fff;
+                        padding: 5px 20px;
+                    }
+                }
+                .xiaochengxu{
+                    background: url('../../assets/image/xiaochengxu.jpg') no-repeat;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    p{
+                       color: #fff;
+                       padding: 5px 20px;
+                    }
+                }
+                .app{
+                    background: url('../../assets/image/app.jpg') no-repeat;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    p{
+                        color: #fff;
+                        padding: 5px;
+                    }
+                }
+                .pcduan{
+                    background: url('../../assets/image/PCduan.jpg') no-repeat;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    p{
+                        color: #fff;
+                        padding: 5px 20px;
+                    }
+                }
+                .solution-h3{
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+    .case{
+        width: 100%;
+        margin: 10px 0 0;
+        padding: 60px 0 0 0;
+        background: url('../../assets/image/Group8.png') no-repeat;
+        .case-item{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .case-list{
+                width: 330px;
+                height: 230px;
+                border: 1px solid #888;
+                margin: 1px 34px 30px 34px;
+                border-radius: 8px;
+                position: relative;
+                overflow: hidden;
+                background: #fff;
+                &:hover{
+                    .case-text{
+                        top: 0;
+                    }
+                }
+                .img-view{
+                    padding: 10px 20px;
+                    img{
+                        width: 150px;
+                    }
+                }
+                .case-text{
+                    width: 330px;
+                    height: 230px;
+                    z-index: 100;
+                    position: absolute;
+                    top: 230px;
+                    transition: top .4s;
+                    // background-color: #fff;
+                    background-color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        height: 124px;
+                    }
+                    span{
+                        display: block;
+                        font-size: 18px;
+                        color: #27292E;
+                        height:25px;
+                        line-height:25px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+  }
+  .foot{
+      width: 100%;
+      background: #373D44;
+      .foot-top{
+        height:165px;
+        display: flex;
+        justify-content: center;
+        padding-top: 60px;
+        .foot-btn{
+            width:230px;
+            height:70px;
+            border-radius:7px;
+            border:1px solid rgba(255,255,255,1);
+            text-align: center;
+            line-height: 70px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+      }
+      .foot-main{
+          display: flex;
+          justify-content: space-around;
+          color: #fff;
+          width: 1000px;
+          margin: 0 auto;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #4F545A;
+          text-align: center;
+          .title{
+              font-size: 20px;
+              margin-bottom: 8px;
+              text-align: center;
+          }
+          .list{
+              li{
+                  font-size: 14px;
+                  margin: 10px 0;
+                  text-align: center;
+                  cursor: pointer;
+              }
+          }
+          .QRcode{
+              display: flex;
+              >div{
+                  margin: 5px 5px 5px 0;
+                  text-align: center;
+              }
+          }
+      }
+      .foot-bottom{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        color: #AAAAAA;
+        font-size: 12px;
+        .foot-item{
+            display: flex;
+            margin: 10px 0;
+            .foot-list{
+                padding: 0 10px;
+                font-size: 12px;
+                border-right: 1px solid #4F545A;
+            }
+            .last{
+                border: none;
+            }
+        }
+        p{
+            margin: 5px 0 30px;
+            a{
+               color: #AAAAAA;
+            }
+        }
+      }
+  }
+}
+</style>

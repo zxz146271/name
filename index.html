@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-127340948-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_626666_q9opdanryji.css">
+    <!-- 标题栏： -->
+    <link rel="icon" href="//shop.muyusi.com/favicon/muyusi_favicon.ico" type="image/x-icon">
+    <!-- 收藏夹： -->
+    <link rel="shortcut icon" href="//shop.muyusi.com/favicon/muyusi_favicon.ico" type="image/x-icon">
+    <style>
+      body .el-message{
+        top: 60px;
+      }
+    </style>
+    <title>蘑鱼丝</title>
+    <script src="//shop.muyusi.com/js/vue.js"></script>
+    <script src="//shop.muyusi.com/js/index.js"></script>
+    <!-- <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.js"></script> -->
+    <script src="//shop.muyusi.com/js/qrcode.js"></script>
+    <!-- <script src="https://unpkg.com/element-china-area-data@4.1.0/dist/app.js"></script> -->
+    <script src="//shop.muyusi.com/js/quill.js"></script>
+    <script src="//shop.muyusi.com/js/vue-quill-editor.js"></script>
+    <script src="//shop.muyusi.com/js/highcharts.js"></script>
+    <script src="//shop.muyusi.com/js/xlsx.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    // Todo 需要优化浏览器检测
+    var userAgent = navigator.userAgent
+    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1
+    if (isIE) {
+      alert('您的浏览器版本过低，请使用IE10以上的版本或者下载谷歌、火狐浏览器！')
+    }
+  </script>
+</html>

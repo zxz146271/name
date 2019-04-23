@@ -1,0 +1,95 @@
+@mixin icon($width, $height, $url, $size: contain){
+  display: inline-block;
+  width: $width;
+  height: $height;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size:$size;
+  background-image: url($url);
+}
+@mixin triangle($width, $height, $color){
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-width:$width $height;
+  font-size: 0;
+  border-style: solid;
+  border-color:$color transparent transparent transparent;
+}
+@mixin triangle-right($width, $height, $color){
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-width:$width $height;
+  font-size: 0;
+  border-style: solid;
+  border-color: transparent  transparent transparent $color;
+}
+@mixin triangle-left($width, $height, $color){
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-width:$width $height;
+  font-size: 0;
+  border-style: solid;
+  border-color: transparent $color  transparent transparent ;
+}
+@mixin arrow-right($width, $height, $color){
+  border: 2px solid $color;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  content: " ";
+  top: 50%;
+  position: absolute;
+  width:$width;
+  height:$width;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+}
+@mixin arrow-left($width, $height, $color){
+  border: 2px solid $color;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  content: " ";
+  top: 50%;
+  position: absolute;
+  width:$width;
+  height:$width;
+  -webkit-transform: translateY(-50%) rotate(225deg);
+  transform: translateY(-50%) rotate(225deg);
+}
+@mixin cross($width, $height, $color){
+  display: inline-block;
+  position: relative;
+  width:$width;
+  height:$height;
+  transform: rotate(45deg);
+  &:before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color:$color;
+  }
+  &:after{
+      content: "";
+      display: block;
+      width:2px;
+      height:100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color:$color;
+  }
+}
